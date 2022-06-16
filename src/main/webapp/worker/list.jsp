@@ -1,4 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,7 +7,7 @@
     <title>Web Worker Manager</title>
 </head>
 <body>
-    <h2>Web Worker Manager!</h2>
-    <a href="/web-worker-manager/list">Workers list</a>
+    <h2>Workers list</h2>
+    functionality is not ready jet
 </body>
 </html>
