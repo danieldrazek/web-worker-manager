@@ -3,9 +3,9 @@ package pl.pp.manager.model;
 public class Worker {
     private String firstName;
     private String lastName;
-    private int salary;
+    private double salary;
 
-    public Worker(String firstName, String lastName, int salary) {
+    public Worker(String firstName, String lastName, double salary) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.salary = salary;
@@ -38,11 +38,11 @@ public class Worker {
         return this;
     }
 
-    public int getSalary() {
+    public double getSalary() {
         return salary;
     }
 
-    public Worker setSalary(int salary) {
+    public Worker setSalary(double salary) {
         this.salary = salary;
         return this;
     }
