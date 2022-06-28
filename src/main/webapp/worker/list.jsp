@@ -6,19 +6,24 @@
     <meta charset="UTF-8">
     <title>Web Worker Manager</title>
 
-    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css" >
 </head>
 <body>
 	<div id="header">
-    <h2>Workers list</h2>
+		<h2>Workers list</h2>
+	</div>
+	<div id="nav">
+		<a href="worker/add-worker.jsp">
+			<div class="button">Add worker</div>
+		</a>
 	</div>
 	<div id="container">
 		<table class="styled-table">
 			<thead>
 				<tr>
-				   <th>Name</th>
-				   <th>Surname</th>
-				   <th>Salary</th>
+					<th>Name</th>
+					<th>Surname</th>
+					<th>Salary</th>
 				</tr>
 			</thead>
 			<tbody>
