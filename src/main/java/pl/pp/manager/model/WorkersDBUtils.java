@@ -34,4 +34,20 @@ public class WorkersDBUtils {
 
         return workers;
     }
+    public static void addWorker(Worker worker, DataSource dataSource) {
+        String sql = "INSERT INTO workers (first_name, last_name, salary) VALUES (?, ?, ?)";
+
+        try (Connection connection = dataSource.getConnection();
+             PreparedStatement statement = connection.prepareStatement(sql)){    //make a statement
+
+            statement.setString(1, worker.getFirstName());
+            statement.setString(2, worker.getLastName());
+            statement.setDouble(3, worker.getSalary());
+
+            statement.execute();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }

@@ -18,7 +18,7 @@
 		</a>
 	</div>
 	<div id="container">
-		<form>
+		<form method="post" action="/web-worker-manager/add-worker">
 			<fieldset>
 				<label for="first-name">Name</label>
 				<input type="text" id="first-name" name="first-name" />
