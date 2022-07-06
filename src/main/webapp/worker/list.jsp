@@ -24,14 +24,19 @@
 					<th>Name</th>
 					<th>Surname</th>
 					<th>Salary</th>
+					<th>Edit</th>
 				</tr>
 			</thead>
 			<tbody>
 				<c:forEach var="worker" items="${workers}">
+				    <c:url var="link" value="/update-worker">
+				        <c:param name="id" value="${worker.id}"/>
+				    </c:url>
 					<tr>
 						<td>${worker.firstName}</td>
 						<td>${worker.lastName}</td>
 						<td>${worker.salary}</td>
+						<td><a href="${link}">Edit</a></td>
 					</tr>
 				</c:forEach>
 			</tbody>

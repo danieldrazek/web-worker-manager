@@ -1,9 +1,16 @@
 package pl.pp.manager.model;
 
 public class Worker {
+    private int id;
     private String firstName;
     private String lastName;
     private double salary;
+    public Worker(int id, String firstName, String lastName, double salary) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.salary = salary;
+    }
 
     public Worker(String firstName, String lastName, double salary) {
         this.firstName = firstName;
@@ -44,6 +51,15 @@ public class Worker {
 
     public Worker setSalary(double salary) {
         this.salary = salary;
+        return this;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public Worker setId(int id) {
+        this.id = id;
         return this;
     }
 }

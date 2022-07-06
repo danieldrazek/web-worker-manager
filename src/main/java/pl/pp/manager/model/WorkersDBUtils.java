@@ -19,11 +19,12 @@ public class WorkersDBUtils {
 
             while (resultSet.next()){
 
+                int id = resultSet.getInt("id");
                 String firstName = resultSet.getString("first_name");
                 String lastName = resultSet.getString("last_name");
                 double salary = resultSet.getDouble("salary");
 
-                Worker worker = new Worker(firstName, lastName, salary);
+                Worker worker = new Worker(id, firstName, lastName, salary);
                 System.out.println(worker);
                 workers.add(worker);
             }
