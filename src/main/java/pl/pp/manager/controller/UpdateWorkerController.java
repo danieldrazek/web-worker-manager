@@ -25,8 +25,9 @@ public class UpdateWorkerController extends HttpServlet {
         response.setContentType("text/html; charset=UTF-8");
         request.setCharacterEncoding("UTF-8");
 
-//        List<Worker> workers = WorkersDBUtils.getWorkers(dataSource);
-//        request.setAttribute("workers", workers);
+        int id = Integer.parseInt(request.getParameter("id"));
+        Worker worker = WorkersDBUtils.getWorkerById(id, dataSource);
+        request.setAttribute("worker", worker);
 
         RequestDispatcher dispatcher = request.getRequestDispatcher("/worker/update-worker.jsp");
         dispatcher.forward(request, response);
