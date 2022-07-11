@@ -25,6 +25,7 @@
 					<th>Surname</th>
 					<th>Salary</th>
 					<th>Edit</th>
+					<th>Delete</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -32,11 +33,15 @@
 				    <c:url var="link" value="/update-worker">
 				        <c:param name="id" value="${worker.id}"/>
 				    </c:url>
+				    <c:url var="deleteLink" value="/delete-worker">
+                        <c:param name="id" value="${worker.id}"/>
+                    </c:url>
 					<tr>
 						<td>${worker.firstName}</td>
 						<td>${worker.lastName}</td>
 						<td>${worker.salary}</td>
 						<td><a href="${link}">Edit</a></td>
+						<td><a href="${deleteLink}">Delete</a></td>
 					</tr>
 				</c:forEach>
 			</tbody>

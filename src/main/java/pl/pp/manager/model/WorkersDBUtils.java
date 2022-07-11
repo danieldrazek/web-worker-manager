@@ -95,4 +95,19 @@ public class WorkersDBUtils {
             e.printStackTrace();
         }
     }
+
+    public static void deleteWorkerById(int id, DataSource dataSource) {
+        String sql = "DELETE FROM workers WHERE id=?";
+
+        try (Connection connection = dataSource.getConnection();
+             PreparedStatement statement = connection.prepareStatement(sql)){
+
+            statement.setInt(1, id);
+
+            statement.execute();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }
