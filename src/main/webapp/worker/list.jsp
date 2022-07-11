@@ -41,7 +41,7 @@
 						<td>${worker.lastName}</td>
 						<td>${worker.salary}</td>
 						<td><a href="${link}">Edit</a></td>
-						<td><a href="${deleteLink}">Delete</a></td>
+						<td><a onclick="return confirm('Are you sure to remove worker?')" href="${deleteLink}">Delete</a></td>
 					</tr>
 				</c:forEach>
 			</tbody>
