@@ -77,4 +77,22 @@ public class WorkersDBUtils {
         }
         return worker;
     }
+
+    public static void updateWorker(Worker worker, DataSource dataSource) {
+        String sql = "UPDATE workers SET first_name=?, last_name=?, salary=? WHERE id=?";
+
+        try (Connection connection = dataSource.getConnection();
+             PreparedStatement statement = connection.prepareStatement(sql)){
+
+            statement.setString(1, worker.getFirstName());
+            statement.setString(2, worker.getLastName());
+            statement.setDouble(3, worker.getSalary());
+            statement.setInt(4, worker.getId());
+
+            statement.execute();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }

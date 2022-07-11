@@ -32,4 +32,24 @@ public class UpdateWorkerController extends HttpServlet {
         RequestDispatcher dispatcher = request.getRequestDispatcher("/worker/update-worker.jsp");
         dispatcher.forward(request, response);
     }
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.setContentType("text/html; charset=UTF-8");
+        request.setCharacterEncoding("UTF-8");
+
+        int id = Integer.parseInt(request.getParameter("id"));
+        String firstName = request.getParameter("first-name");
+        String lastName = request.getParameter("last-name");
+        double salary = Double.parseDouble(request.getParameter("salary"));
+
+        Worker worker = new Worker(id, firstName, lastName, salary);
+
+        WorkersDBUtils.updateWorker(worker, dataSource);
+
+        List<Worker> workers = WorkersDBUtils.getWorkers(dataSource);
+        request.setAttribute("workers", workers);
+
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/worker/list.jsp");
+        dispatcher.forward(request, response);
+    }
 }

@@ -18,7 +18,7 @@
 		</a>
 	</div>
 	<div id="container">
-		<form method="post" action="/web-worker-manager/add-worker">
+		<form method="post" action="/web-worker-manager/update-worker">
 			<fieldset>
 			    <input type="hidden" name="id" value="${worker.id}"/>
 
