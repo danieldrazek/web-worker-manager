@@ -34,10 +34,6 @@ public class AddWorkerController extends HttpServlet {
 
         WorkersDBUtils.addWorker(worker, dataSource);
 
-        List<Worker> workers = WorkersDBUtils.getWorkers(dataSource);
-        request.setAttribute("workers", workers);
-
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/worker/list.jsp");
-        dispatcher.forward(request, response);
+        response.sendRedirect(request.getContextPath() + "/list");      // Post/Redirect/Get (PRG)
     }
 }
