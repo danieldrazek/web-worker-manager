@@ -11,7 +11,7 @@ The app is employee data management from the web interface linked to workers dat
 ### Home website
 ![Home](./img/home.png)
 
-### Workers list table website
+### Workers table list website
 ![Worker list](./img/workersListTable.png)
 
 ### Update worker form website
