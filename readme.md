@@ -35,6 +35,7 @@ The app is employee data management from the web interface linked to workers dat
 - mysql-connector-java version - version 8.0.29
 - jstl - version 1.2
 - jakarta.servlet.jsp.jstl - version 1.2.6
+- junit version 4.11
 
 ## Design patterns:
 - MVC (Model: MySql, View: JSP, Controller: Servlet)
