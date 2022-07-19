@@ -25,9 +25,9 @@ The app is employee data management from the web interface linked to workers dat
 
 ## Technologies Used
 - Java version 1.8 (back end)
-- JSP (back end)
+- JSP (front end)
 - MySQL
-- XML (front end)
+- XML
 - CSS (front end)
 - Maven
 - XAMPP
