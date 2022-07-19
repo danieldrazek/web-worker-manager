@@ -1,7 +1,7 @@
 # Web Worker Manager
 
 ## General Information
-The app is employee data management from the web interface linked to workers database. The application is based on CRUD (Create, Read, Update, and Delete) standard and built on the basis of the REST API architecture. The application uses the MVC (Model - View - Controller) design pattern. The Model is represented by MySQL database, View is based on JSP technology and Controller is a Servlet. The application is used to manage the employee base and implements CRUD functionalities:
+The app is employee data management from the web interface linked to workers database. The application is based on CRUD (Create, Read, Update, and Delete) standard. The application uses the MVC (Model - View - Controller) design pattern. The Model is represented by MySQL database, View is based on JSP technology and Controller is a Servlet. The application is used to manage the employee base and implements CRUD functionalities:
 - creating a new employee (CREATE - INSERT(MySQL))
 - reading the employee from the database (READ - SELECT(MySQL))
 - modifying an employee (UPDATE - UPDATE(MySQL))
@@ -30,7 +30,6 @@ The app is employee data management from the web interface linked to workers dat
 - XML (front end)
 - CSS (front end)
 - Maven
-- REST API
 - XAMPP
 - Tomcat
 
